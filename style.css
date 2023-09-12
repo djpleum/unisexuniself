@@ -1,0 +1,992 @@
+ @font-face {
+     font-family: FC Friday;
+     src: url(FC\ Friday\ Medium.ttf);
+ }
+ 
+ html {
+     scroll-behavior: smooth;
+ }
+ 
+ body {
+     background: #242424;
+     font-family: FC Friday;
+     color: white;
+     transition-duration: 0.5s;
+     background-attachment: fixed;
+     width: 100%;
+     height: auto;
+ }
+ 
+ #myVideo {
+     position: absolute;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     min-width: 100%;
+     min-height: 100%;
+     opacity: 0.5;
+     transition: 1.5s;
+     z-index: -1;
+ }
+ /* menubar */
+ 
+ #header {
+     width: auto;
+     height: 75px;
+     background-color: #24242400;
+     color: aliceblue;
+     position: absolute;
+     z-index: 2;
+ }
+ 
+ .menu {
+     /* background-color: deeppink; */
+     text-align: right;
+     padding-bottom: 15px;
+     padding-left: 60px;
+     padding-top: 20px;
+ }
+ 
+ .overlay {
+     height: 0%;
+     width: 100%;
+     position: fixed;
+     z-index: 4;
+     top: 0;
+     left: 0;
+     background-color: rgba(0, 0, 0, 0);
+     background-color: rgba(0, 0, 0, 0.7);
+     overflow-y: hidden;
+     transition: 0.4s;
+ }
+ 
+ .overlay-content {
+     position: relative;
+     top: 25%;
+     width: auto;
+     text-align: center;
+     margin-top: 30px;
+ }
+ 
+ .overlay a {
+     padding: 15px;
+     text-decoration: none;
+     font-size: 54px;
+     color: #ffffff;
+     display: block;
+     transition: 2s;
+     font-family: FC Friday;
+     font-weight: 300;
+     font-style: italic;
+     text-align: center;
+ }
+ 
+ .overlay a:hover,
+ .overlay a:focus {
+     color: #FF5B2B;
+ }
+ 
+ .overlay .closebtn {
+     position: absolute;
+     right: 100px;
+     font-size: 60px;
+ }
+ /* CONTENT */
+ 
+ .container {
+     width: auto;
+     text-align: center;
+ }
+ 
+ .Head {
+     position: absolute;
+     height: 1024px;
+     background: url(HEADBG.jpg);
+     background-attachment: fixed;
+     width: 100%;
+     z-index: 1;
+     text-align: center;
+ }
+ 
+ .Title {
+     position: relative;
+     top: 250px;
+     z-index: 1;
+     text-align: center;
+ }
+ 
+ .Pre-Title {
+     position: relative;
+     top: 250px;
+     z-index: 1;
+     text-align: center;
+     -webkit-animation-name: zoom;
+     -webkit-animation-duration: 2.0s;
+     animation-name: zoom;
+     animation-duration: 2.0s;
+ }
+ 
+ .Pre-Title img:hover {
+     padding: 20px;
+     background-color: #FF5B2B;
+     transition: 1.5s;
+ }
+ 
+ .Title img:hover {
+     padding: 20px;
+     background-color: #FF5B2B;
+     transition: 1.5s;
+ }
+ 
+ .Subtitle {
+     position: relative;
+     top: 50px;
+     z-index: 1;
+     font-size: 24px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 27px;
+     -webkit-animation-name: zoom;
+     -webkit-animation-duration: 1.0s;
+     animation-name: zoom;
+     animation-duration: 1.0s;
+ }
+ 
+ .button {
+     background-color: #FF5B2B;
+     position: relative;
+     border: 1px;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 36px;
+     margin: 4px 2px;
+     cursor: pointer;
+     z-index: 1;
+     margin-top: 300px;
+     transition-duration: 0.4s;
+     border-radius: 150px;
+     -webkit-animation-name: zoom;
+     -webkit-animation-duration: 2.0s;
+     animation-name: zoom;
+     animation-duration: 2.0s;
+ }
+ 
+ .button1 {
+     background-color: #FF5B2B;
+     position: relative;
+     border: 1px;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 36px;
+     margin: 50px 50px;
+     cursor: pointer;
+     z-index: 1;
+     margin-top: 50px;
+     transition-duration: 0.4s;
+     border-radius: 150px;
+     -webkit-animation-name: zoom;
+     -webkit-animation-duration: 2.0s;
+     animation-name: zoom;
+     animation-duration: 2.0s;
+ }
+ 
+ .button a,
+ .button1 a {
+     text-decoration: none;
+     color: white;
+ }
+ 
+ .button:hover,
+ .button1:hover {
+     background-color: #4caf4f00;
+     border: 5px solid #FF5B2B;
+     border-radius: 150px;
+     color: #FF5B2B;
+ }
+ 
+ .intro {
+     padding-top: 1000px;
+     z-index: 2;
+ }
+ 
+ .clip {
+     text-align: center;
+ }
+ 
+ .intro-context {
+     align-items: center;
+     text-align: justify;
+     padding-top: 200px;
+     line-height: 26px;
+     font-size: 24px;
+     color: #FF5B2B;
+     transition: 700ms;
+ }
+ 
+ .intro-context a {
+     text-decoration: none;
+     color: #FF5B2B;
+     line-height: 32px;
+ }
+ 
+ .intro-context a:hover {
+     color: #FF5B2B;
+     text-decoration: underline;
+ }
+ 
+ .intro-text {
+     padding-top: 150px;
+     padding-bottom: 150px;
+     text-align: center;
+     font-size: 24px;
+     line-height: 27px;
+ }
+ 
+ hr {
+     width: 500px;
+     border-color: #FF5B2B;
+     text-align: left;
+     margin-top: 50px;
+     margin-left: 300px;
+ }
+ 
+ h4:hover {
+     color: #FF5B2B;
+     cursor: pointer;
+     transition: 1.5s;
+ }
+ 
+ h3 {
+     font-size: 36px;
+     font-weight: 500;
+     line-height: 27px;
+ }
+ 
+ #content1 img,
+ #content2 img,
+ #content3 img,
+ #content4 img,
+ #content5 img,
+ #content6 img {
+     opacity: 0.8;
+ }
+ 
+ #content1 img:hover,
+ #content2 img:hover,
+ #content3 img:hover,
+ #content4 img:hover,
+ #content5 img:hover,
+ #content6 img:hover {
+     opacity: 1;
+     transition: 1s;
+     cursor: pointer;
+ }
+ /* #1 */
+ 
+ #content1 {
+     background-color: white;
+     height: auto;
+     text-align: center;
+     width: 100%;
+ }
+ 
+ .headcontentbox {
+     color: #FF5B2B;
+     padding-top: 100px;
+ }
+ 
+ .pichead img {
+     max-height: 687px;
+     z-index: 0;
+     padding: 0px
+ }
+ 
+ .texthead {
+     position: absolute;
+     z-index: 2;
+     text-align: left;
+     padding-top: 200px;
+     padding-left: 400px;
+ }
+ 
+ .stylisthead {
+     padding-left: 490px;
+     text-align: justify;
+ }
+ 
+ .story {
+     color: #242424;
+     font-size: 26px;
+     position: relative;
+ }
+ /* #2 */
+ 
+ #content2 {
+     background-color: #242424;
+     height: auto;
+     text-align: center;
+     background-attachment: fixed;
+     width: 100%;
+ }
+ 
+ .headcontentbox2 {
+     color: #FF5B2B;
+     padding-top: 100px;
+ }
+ 
+ .pichead2 img {
+     max-height: 687px;
+     z-index: 0;
+     padding: 0px
+ }
+ 
+ .texthead2 {
+     position: absolute;
+     z-index: 2;
+     text-align: left;
+     padding-top: 200px;
+     padding-left: 400px;
+ }
+ 
+ .stylisthead2 {
+     padding-left: 490px;
+     text-align: justify;
+ }
+ 
+ .story2 {
+     padding-top: 100px;
+     padding-bottom: 100px;
+     color: #ffffff;
+     font-size: 26px;
+     position: relative;
+ }
+ 
+ #img01 {
+     border-radius: 5px;
+     cursor: pointer;
+     transition: 0.3s;
+     padding-right: 20px;
+     padding-top: 50px;
+ }
+ 
+ #img01:hover {
+     opacity: 0.7;
+ }
+ 
+ .quote2 {
+     padding-top: 100px;
+     padding-bottom: 100px;
+     color: #ffffff;
+     font-size: 26px;
+     position: relative;
+ }
+ /* #3 */
+ 
+ #content3 {
+     background-color: #ffffff;
+     height: auto;
+     text-align: center;
+     background-attachment: fixed;
+     width: 100%;
+ }
+ 
+ .headcontentbox3 {
+     color: #FF5B2B;
+     padding-top: 100px;
+ }
+ 
+ .pichead3 img {
+     max-height: 687px;
+     z-index: 0;
+     padding: 0px
+ }
+ 
+ .texthead3 {
+     position: absolute;
+     z-index: 2;
+     text-align: left;
+     padding-top: 200px;
+     padding-left: 400px;
+ }
+ 
+ .stylisthead3 {
+     padding-left: 490px;
+     text-align: justify;
+ }
+ 
+ .story3 {
+     padding-top: 100px;
+     padding-bottom: 100px;
+     color: #242424;
+     font-size: 26px;
+     position: relative;
+ }
+ /* #4 */
+ 
+ #content4 {
+     background-color: #242424;
+     height: auto;
+     text-align: center;
+     background-attachment: fixed;
+     width: 100%;
+ }
+ 
+ .headcontentbox4 {
+     color: #FF5B2B;
+     padding-top: 100px;
+ }
+ 
+ .pichead4 img {
+     max-height: 687px;
+     z-index: 0;
+ }
+ 
+ .texthead4 {
+     position: absolute;
+     z-index: 2;
+     text-align: left;
+     padding-top: 200px;
+     padding-left: 400px;
+ }
+ 
+ .stylisthead4 {
+     padding-left: 490px;
+     text-align: justify;
+ }
+ 
+ .story4 {
+     padding-top: 100px;
+     padding-bottom: 100px;
+     color: #ffffff;
+     font-size: 26px;
+     position: relative;
+ }
+ /* #5 */
+ 
+ #content5 {
+     background-color: #ffffff;
+     height: auto;
+     text-align: center;
+     background-attachment: fixed;
+     width: 100%;
+ }
+ 
+ .headcontentbox5 {
+     color: #FF5B2B;
+     padding-top: 100px;
+ }
+ 
+ .pichead5 img {
+     max-height: 687px;
+     z-index: 0;
+     padding: 0px
+ }
+ 
+ .texthead5 {
+     position: absolute;
+     z-index: 2;
+     text-align: left;
+     padding-top: 200px;
+     padding-left: 400px;
+ }
+ 
+ .Dress {
+     font-size: 99.36px;
+ }
+ 
+ .stylisthead5 {
+     padding-left: 490px;
+     text-align: justify;
+ }
+ 
+ .story5 {
+     padding-top: 100px;
+     padding-bottom: 100px;
+     color: #242424;
+     font-size: 26px;
+     position: relative;
+ }
+ /* #6 */
+ 
+ #outro {
+     height: auto;
+     text-align: center;
+     width: 100%;
+ }
+ 
+ .headcontentbox6 {
+     color: #FF5B2B;
+     padding-top: 100px;
+ }
+ 
+ .texthead6 {
+     position: relative;
+     z-index: 2;
+     text-align: center;
+ }
+ 
+ .story6 {
+     padding-top: 100px;
+     padding-bottom: 100px;
+     color: #ffffff;
+     font-size: 26px;
+     position: relative;
+ }
+ /* Style the Image Used to Trigger the Modal */
+ 
+ #myImg {
+     border-radius: 5px;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+ 
+ #myImg:hover {
+     opacity: 0.7;
+ }
+ /* The Modal (background) */
+ 
+ .modal {
+     display: none;
+     /* Hidden by default */
+     position: fixed;
+     /* Stay in place */
+     z-index: 1;
+     /* Sit on top */
+     padding-top: 100px;
+     /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%;
+     /* Full width */
+     height: 100%;
+     /* Full height */
+     overflow: auto;
+     /* Enable scroll if needed */
+     background-color: rgb(0, 0, 0);
+     /* Fallback color */
+     background-color: rgba(0, 0, 0, 0.9);
+     /* Black w/ opacity */
+ }
+ /* Modal Content (Image) */
+ 
+ .modal-content {
+     margin: auto;
+     display: block;
+     width: 80%;
+     max-width: 700px;
+ }
+ /* Caption of Modal Image (Image Text) - Same Width as the Image */
+ 
+ #caption {
+     margin: auto;
+     display: block;
+     width: 80%;
+     max-width: 700px;
+     text-align: center;
+     color: #ccc;
+     padding: 10px 0;
+     height: 150px;
+ }
+ /* Add Animation - Zoom in the Modal */
+ 
+ .modal-content,
+ #caption {
+     -webkit-animation-name: zoom;
+     -webkit-animation-duration: 0.6s;
+     animation-name: zoom;
+     animation-duration: 0.6s;
+ }
+ 
+ @-webkit-keyframes zoom {
+     from {
+         -webkit-transform: scale(0)
+     }
+     to {
+         -webkit-transform: scale(1)
+     }
+ }
+ 
+ @keyframes zoom {
+     from {
+         transform: scale(0)
+     }
+     to {
+         transform: scale(1)
+     }
+ }
+ /* The Close Button */
+ 
+ .close {
+     position: absolute;
+     top: 15px;
+     right: 35px;
+     color: #f1f1f1;
+     font-size: 40px;
+     font-weight: bold;
+     transition: 0.3s;
+ }
+ 
+ .close:hover,
+ .close:focus {
+     color: #bbb;
+     text-decoration: none;
+     cursor: pointer;
+ }
+ 
+ .footer {
+     display: block;
+     width: 100%;
+     height: auto;
+     bottom: 0;
+     background-color: #FF5B2B;
+     padding: 20px;
+     color: rgb(255, 255, 255);
+ }
+ 
+ .Subtitle-profile {
+     font-size: 20px;
+     text-align: center;
+     position: relative;
+     padding-top: 180px;
+     font-size: 16px;
+ }
+ 
+ .Subtitle-profile a {
+     cursor: pointer;
+     color: #ffffff;
+ }
+ 
+ .Subtitle-profile a:hover {
+     font-size: 48;
+     cursor: pointer;
+     transition: 1.2s;
+     color: #FF5B2B;
+ }
+ 
+ .work {
+     font-size: 26px;
+     text-align: center;
+ }
+ 
+ .bigtitle {
+     text-align: center;
+ }
+ 
+ .work {
+     text-align: center;
+ }
+ 
+ .work-pic {
+     padding-top: 20px;
+     padding-bottom: 20px;
+ }
+ 
+ .headcontentbox,
+ .headcontentbox2,
+ .headcontentbox3,
+ .headcontentbox4,
+ .headcontentbox5,
+ .headcontentbox6 {
+     width: 100%;
+ }
+ 
+ .quoutestory {
+     padding-top: 30px;
+     margin-bottom: 50px;
+ }
+ 
+ @media screen and (min-width:375px) {
+     .menu {
+         /* background-color: deeppink; */
+         text-align: center;
+         margin-right: 65px;
+     }
+     .Pre-Title img {
+         max-width: 330px;
+     }
+     .Title img {
+         max-width: 350px;
+     }
+     .Subtitle {
+         font-size: 18px;
+     }
+     .clip iframe {
+         max-width: 300px;
+         text-align: center;
+     }
+     .intro-text {
+         padding-top: 100px;
+         padding-bottom: 100px;
+         text-align: center;
+         font-size: 16px;
+     }
+     .intro-context {
+         font-size: 16px;
+         margin-left: 5px;
+     }
+     .texthead,
+     .texthead2,
+     .texthead3,
+     .texthead4,
+     .texthead5,
+     .texthead6 {
+         font-size: 64px;
+         padding-top: 150px;
+         padding-left: 20px;
+         line-height: 36px;
+     }
+     .texthead6 {
+         font-size: 170px;
+         margin-top: 250px;
+         padding-left: 20px;
+         line-height: 36px;
+     }
+     .stylisthead,
+     .stylisthead2,
+     .stylisthead3,
+     .stylisthead4,
+     .stylisthead5 {
+         padding-left: 240px;
+         text-align: justify;
+         line-height: 16px;
+         width: auto;
+         font-size: 12px;
+     }
+     .pichead img,
+     .pichead2 img,
+     .pichead3 img,
+     .pichead4 img,
+     .pichead5 img {
+         max-height: 400px;
+     }
+     hr {
+         width: 200px;
+         border-color: tomato;
+         text-align: left;
+         margin-top: 50px;
+         margin-left: 0px;
+     }
+     .story,
+     .story2,
+     .story3,
+     .story4,
+     .story5,
+     .story6 {
+         text-align: center;
+         padding-left: 50px;
+         padding-right: 50px;
+         font-size: 16px;
+     }
+     .story6 img {
+         max-width: 350px;
+     }
+     h2 {
+         font-size: 48px;
+         line-height: 24px;
+     }
+     h4 {
+         font-size: 24px;
+         font-weight: 500;
+     }
+     h5 {
+         font-size: 72px;
+         font-style: italic;
+     }
+     .storypics1 img,
+     .storypics4 img,
+     .storypics3 img,
+     .storypics2 img,
+     .storypics5 img,
+     .storypics6 img {
+         padding: 20px;
+         max-width: 350px;
+     }
+     .work {
+         text-align: center;
+     }
+     .workbox {
+         text-align: center;
+     }
+     .work-title {
+         padding-top: 280px;
+         padding-bottom: 240px;
+         text-align: center;
+         font-size: 144px;
+         font-style: italic;
+     }
+     .work-pic img {
+         max-height: 300px;
+         padding-bottom: 20px;
+         text-align: center;
+     }
+     .work-desc {
+         text-align: center;
+         font-size: 16px;
+     }
+     .workbox {
+         padding-bottom: 150px;
+     }
+     .bigtitle {
+         padding-bottom: 75px;
+     }
+     .footer {
+         text-align: center;
+         font-size: 24px;
+         padding-left: 20px;
+     }
+     .credit {
+         color: #FF5B2B;
+     }
+ }
+ 
+ @media screen and (min-width:1024px) {
+     .menu {
+         /* background-color: deeppink; */
+         float: right;
+         text-align: right;
+         padding-right: 120px;
+         padding-bottom: 15px;
+     }
+     .Pre-Title img {
+         max-width: 600px;
+     }
+     .Title img {
+         max-width: 600px;
+     }
+     .Subtitle {
+         font-size: 24px;
+     }
+     .intro-text {
+         text-align: center;
+         font-size: 24px;
+     }
+     .intro-context {
+         padding-left: 300px;
+         font-size: 24px;
+     }
+     .clip iframe {
+         max-width: 800px;
+         text-align: center;
+     }
+     .texthead,
+     .texthead2,
+     .texthead3,
+     .texthead4,
+     .texthead5 {
+         font-size: 96px;
+         line-height: 56px;
+         padding-top: 200px;
+         padding-left: 400px;
+     }
+     .texthead6 {
+         font-size: 96px;
+         line-height: 64px;
+         padding-top: 100px;
+         text-align: center;
+     }
+     .pichead img,
+     .pichead2 img,
+     .pichead3 img,
+     .pichead4 img,
+     .pichead5 img {
+         max-height: 687px;
+     }
+     .stylisthead,
+     .stylisthead2,
+     .stylisthead3,
+     .stylisthead4,
+     .stylisthead5 {
+         font-size: 14px;
+         line-height: 18px;
+         margin-left: 400px;
+     }
+     hr {
+         width: 200px;
+         border-color: tomato;
+         text-align: left;
+         margin-top: 50px;
+         margin-left: 300px;
+     }
+     .story,
+     .story2,
+     .story3,
+     .story4,
+     .story5,
+     .story6 {
+         font-size: 24px;
+     }
+     h2 {
+         font-size: 72px;
+         line-height: 48px;
+     }
+     h4 {
+         font-size: 36px;
+         font-weight: 500;
+     }
+     h5 {
+         font-size: 144px;
+         font-style: italic;
+     }
+     .storypics1 img,
+     .storypics4 img,
+     .storypics3 img,
+     .storypics2 img,
+     .storypics5 img {
+         padding-top: 50px;
+         max-width: 300px;
+     }
+     .storypics6 img {
+         padding-top: 50px;
+         max-height: 250px;
+         height: 250px;
+     }
+     .work-pic img {
+         max-height: 310px;
+         padding-left: 50px;
+         padding-bottom: 20px;
+         text-align: center;
+     }
+     .work-desc {
+         text-align: center;
+         font-size: 24px;
+     }
+     .footer {
+         text-align: left;
+     }
+     .work-title {
+         font-size: 144px;
+     }
+     @media screen and (max-width: 375px) {
+         .overlay {
+             overflow-y: auto;
+         }
+         .overlay a {
+             font-size: 20px
+         }
+         .overlay .closebtn {
+             font-size: 40px;
+             top: 15px;
+             right: 35px;
+         }
+     }
+     @media only screen and (max-width: 375px) {
+         .modal-content {
+             width: 100%;
+         }
+     }
+     @media screen and (min-width:1440px) {
+         .stylisthead,
+         .stylisthead2,
+         .stylisthead3,
+         .stylisthead4,
+         .stylisthead5 {
+             font-size: 14px;
+             line-height: 18px;
+             margin-left: 640px;
+         }
+     }
+ }
